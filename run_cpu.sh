@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=29G
 #SBATCH -p batch_ugrad
-#SBATCH -o /data/jhlee39/workspace/logs/slurm-%A.out
+#SBATCH -o /data/     /workspace/logs/slurm-%A.out
 
 
 python vid2img.py

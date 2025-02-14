@@ -3,7 +3,7 @@ import cv2
 from tqdm import tqdm
 
 def extract_frames(video_path, output_dir):
-    """비디오에서 프레임을 추출하여 지정된 디렉토리에 저장 (JPG, 품질 98%)"""
+    
     os.makedirs(output_dir, exist_ok=True)
 
     cap = cv2.VideoCapture(video_path)
@@ -30,15 +30,15 @@ def extract_frames(video_path, output_dir):
     print(f"Extracted {frame_count} frames from {video_path}")
 
 def process_ucf_crime_dataset(root_dir, output_root):
-    """UCF-Crime 데이터셋의 모든 비디오에 대해 프레임을 추출 (JPG 저장)"""
+    
     for dirpath, _, filenames in os.walk(root_dir):
-        # 모든 .mp4 파일을 찾음
+        
         videos = [f for f in filenames if f.endswith(".mp4")]
 
         for video in videos:
             video_path = os.path.join(dirpath, video)
 
-            # `dirpath`의 루트부터의 경로 구조를 유지하기 위해 상대 경로 계산
+            
             relative_path = os.path.relpath(dirpath, root_dir)
             output_dir = os.path.join(output_root, relative_path, os.path.splitext(video)[0])
 
