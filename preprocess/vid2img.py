@@ -45,7 +45,7 @@ def process_ucf_crime_dataset(root_dir, output_root):
             extract_frames(video_path, output_dir)
 
 if __name__ == "__main__":
-    ucf_crime_path = "../Data/ucf"
-    output_path = "../Data/ucf_frame"
+    ucf_crime_path = "../../Data/ucf"
+    output_path = "../../Data/ucf_frame"
     process_ucf_crime_dataset(ucf_crime_path, output_path)
 
