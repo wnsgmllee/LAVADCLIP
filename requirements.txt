@@ -22,4 +22,4 @@ transformers
 accelerate
 timm==0.6.7
 clip
-pip install python-dotenv
+python-dotenv
